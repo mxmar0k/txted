@@ -50,3 +50,11 @@ lolol@gmail.com
 
 ## Questions
 For questions about this project, please contact lolol at lolol@gmail.com. GitHub: [lolol](https://github.com/lolol)
+
+
+![Alt text](<Captura de pantalla 2023-10-12 a la(s) 1.06.37 a.m..png>)
+
+Find the app live on https://edithor-2879435751bb.herokuapp.com/
+
+Repo: https://github.com/mxmar0k/txted
+
