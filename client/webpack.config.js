@@ -5,10 +5,10 @@ const { InjectManifest } = require("workbox-webpack-plugin");
 
 module.exports = () => {
   return {
-    mode: "development",
+    mode: 'development',
     entry: {
-      main: "./src/js/index.js",
-      install: "./src/js/install.js",
+      main: './src/js/index.js',
+      install: './src/js/install.js',
       database: './src/js/database.js',
       editor: './src/js/editor.js',
       header: './src/js/header.js',
@@ -23,7 +23,7 @@ module.exports = () => {
     plugins: [
       // here we added HtmlWebpackPlugin to generate HTML files
       new HtmlWebpackPlugin({
-        template: "./index.html",
+        template: './index.html',
         title: "JATE",
       }),
 
@@ -34,8 +34,8 @@ module.exports = () => {
         description: "A simple text editor",
         background_color: "#7eb4e2",
         theme_color: "#7eb4e2",
-        start_url: "/",
-        publicPath: "/",
+        start_url: '/',
+        publicPath: '/',
         fingerprints: false,
         inject: true,
         icons: [

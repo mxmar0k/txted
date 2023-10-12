@@ -38,20 +38,16 @@ registerRoute(
 
 // this is the adapted asset caching with StaleWhileRevalidate strategy based on destination, this is what i changed because it didnt work with the first strategy
 registerRoute(
-  ({ request }) =>
-    request.destination === 'style' ||
-    request.destination === 'script' ||
-    request.destination === 'image',
+  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
   new StaleWhileRevalidate({
-    cacheName: 'asset-cache', // Set a cache name for assets
+    cacheName: 'asset-cache',
     plugins: [
-      // Cache responses with status codes 0 and 200
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
-      // Set an expiration for the cached assets (7 days)
       new ExpirationPlugin({
-        maxAgeSeconds: 7 * 24 * 60 * 60 // 7 days
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60,
       })
     ],
   })
