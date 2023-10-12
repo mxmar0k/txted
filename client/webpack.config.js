@@ -70,7 +70,7 @@ module.exports = () => {
         // finally we added Babel loader to transpile JavaScript files
         {
           test: /\.m?js$/,
-          exclude: /(node_modules|bower_components)/,
+          exclude: /node_modules/,
           use: {
             loader: "babel-loader",
             options: {
